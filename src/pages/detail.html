@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <navbar class="fixed w-full shadow-md bg-white">
+        <div class="flex justify-between py-4 max-w-7xl mx-auto">
+            <div>
+            <img src="../images/Logo.svg" alt="" />
+            </div>
+            <div class="flex items-center w-1/2">
+            <input
+                type="text"
+                class="border rounded w-full py-2 px-6"
+                placeholder="Cari kebutuhan kamu disini..." />
+            </div>
+            <div class="flex items-center gap-4">
+            <div class="border-r px-4 cursor-pointer">
+                <img src="../images/Keranjang.svg" alt="" />
+            </div>
+            <div class="flex gap-1 cursor-pointer">
+                <img src="../images/Notification.svg" alt="" />
+                <p>Notifikasi</p>
+            </div>
+            <div class="flex gap-1 cursor-pointer">
+                <img src="../images/User.svg" alt="" />
+                <p>User</p>
+            </div>
+            </div>
+        </div>
+    </navbar>
+    <header class="text-[#979797] max-w-5xl mx-auto font-medium text-sm pt-32 pb-10">Home > Buah > <span class="text-[#00838F]">Semangka Palembang</span></header>
+    <section class="max-w-5xl mx-auto">
+        <!-- DETAIL BUAH -->
+        <div class="grid grid-cols-2 pb-4 border-b">
+            <div>
+                <img src="../images/Mask Group.svg" alt="">
+            </div>
+            <div>
+                <h3 class="font-bold text-4xl">Apel Segar Probolinggo - 1kg</h3>
+                <p class="font-semibold text-2xl py-4 border-b">Rp. 28.500<span class="text-[#757575] text-xl">/kg</span></p>
+                <h4 class="text-lg font-semibold pt-4 pb-1">Informasi produk</h4>
+                <p class="text-sm text-[#757575] pb-4 border-b">Apel adalah jenis buah berwarna merah kulitnya jika masak dan siap dimakan, namun bisa juga kulitnya berwarna hijau atau kuning. Kulit buahnya agak lembek dan daging buahnya keras. Buah ini memiliki beberapa biji di dalamnya.</p>
+                <div>
+                    <h4 class="text-lg font-semibold pt-4 pb-2">Pengiriman</h4>
+                    <div>
+                        <div class="flex gap-2 pb-1">
+                            <img src="../images/Location.svg" alt="">
+                            <p class="text-[#757575] text-sm ml-[7px]">Dikirim dari <span class="text-black">Pasar Lembang, Kota Probolinggo</span></p>
+                        </div>
+                        <div class="flex gap-2">
+                            <img src="../images/truck.svg" alt="">
+                            <p class="text-[#757575] text-sm">Pengiriman ke <span class="text-black">Sumbersari, Kabupaten Jember</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- PENJUAL -->
+        <div class="flex justify-between py-4">
+            <div>
+                <h3 class="font-semibold text-2xl">Pedagang</h3>
+                <div class="flex gap-4 py-4">
+                    <img src="../images/Profil.svg" alt="">
+                    <div>
+                        <h4 class="font-semibold text-xl pb-1">Pak Sudjayana</h4>
+                        <div class="flex gap-2">
+                            <img src="../images/Location.svg" alt="">
+                            <p class="ml-0.5 text-[#757575]">Pasar Lembang, Kota Probolinggo</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <img src="../images/Star.svg" alt="">
+                            <p class="text-[#757575]">4.3 Rata-rata ulasan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="py-2">
+                <button class="bg-white rounded py-2 text-primary px-4 font-semibold border border-primary mr-2">Buat tawaran</button>
+                <button class="bg-primary rounded py-2 text-white px-4 font-semibold">+ Keranjang</button>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>

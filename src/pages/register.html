@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="flex items-center justify-center h-screen overflow-hidden bg-register">
+        <div class="py-8 px-[68px] bg-white max-w-[511px] rounded-[10px] ml-[900px] shadow-2xl">
+            <div class="text-center">
+                <h2 class="text-primary font-bold text-lg">Daftar Sekarang</h2>
+                <p class="text-xs">Sudah punya akun Pasarpedia? <a href="#" class="text-primary text-xs">Masuk</a></p>
+            </div>
+            <div class="py-10 ">
+                <h2 class="font-bold text-xl">Buat Akun Anda</h2>
+                <p class="text-[#757575] text-xs">Lengkapi data diri anda di bawah ini</p>
+            </div>
+            <div>
+                <form id="login-form" action="">
+                    <div class="flex flex-col">
+                        <label for="name" class="text-xs font-semibold">Nama Anda</label>
+                        <input id="name" type="text" placeholder="Nama lengkap"
+                            class="w-full rounded-[10px] py-5 px-[15px] font-light text-sm my-[7px] border">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="email" class="text-xs font-semibold">Email</label>
+                        <input id="email" type="text" placeholder="Nomor Telepon/Email"
+                            class="w-full rounded-[10px] py-5 px-[15px] font-light text-sm my-[7px] border">
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="password" class="text-xs font-semibold">Password</label>
+                        <input id="password" type="password" placeholder="Password"
+                            class="w-full rounded-[10px] py-5 px-[15px] font-light text-sm my-[7px] border">
+                    </div>
+                    <div class="flex gap-2">
+                        <input type="checkbox">
+                        <p class="text-black opacity-50 text-xs">Saya menerima syarat yang sudah ditentukan dan tidak
+                            akan melanggar</p>
+                    </div>
+                    <button
+                        class="bg-primary text-center text-white mx-auto w-full mt-6 mb-3 py-3 font-semibold text-xl rounded-[10px]">Login</button>
+                </form>
+                <div class="mx-auto">
+                    <p class="text-[10px] text-black opacity-70 text-center">Dengan Masuk, saya menyetujui <br><span
+                            class="text-[#203864] cursor-pointer">Syarat dan Ketentuan </span>serta <span
+                            class="text-[#203864] cursor-pointer">Kebijakan Privasi</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Saat tombol login ditekan
+            $("form#login-form").submit(function (e) {
+                e.preventDefault(); // Mencegah halaman refresh saat submit form
+
+                // Mendapatkan inputan dari user
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var password = $("#password").val();
+
+                // Validasi inputan
+                if (name === "" || email === "" || password === "") {
+                    alert("Silahkan lengkapi data diri Anda");
+                    return false;
+                } else if (!validateEmail(email)) {
+                    alert("Format email tidak valid!");
+                    return false;
+                } else if (password.length < 6) {
+                    alert("Password minimal harus terdiri dari 6 karakter");
+                    return false;
+                } else if (!$("input[type='checkbox']").is(":checked")) {
+                    alert("Silahkan terima syarat dan ketentuan");
+                    return false;
+                } else {
+                    // Jika inputan valid, maka login berhasil
+                    window.location.href = "home.html";
+                    return true;
+                }
+            });
+
+            // Fungsi validasi email
+            function validateEmail(email) {
+                var re = /\S+@\S+\.\S+/;
+                return re.test(email);
+            }
+        });
+
+    </script>
+</body>
+
+</html>
